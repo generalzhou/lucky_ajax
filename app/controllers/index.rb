@@ -11,5 +11,12 @@ post '/rolls' do
 
   @roll = value ? Roll.create({ value: value }) : Roll.create
 
-  erb :index  # HINT: what does this do? what should we do instead?
+
+
+
+  if params[:javascript]
+    params[:value]
+  else
+    erb :index  # HINT: what does this do? what should we do instead?
+  end
 end
